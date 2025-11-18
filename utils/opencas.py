@@ -855,7 +855,7 @@ def wait_for_startup(timeout=300, interval=5):
     def start_device(dev):
         if os.path.exists(dev.device):
             if type(dev) is cas_config.core_config:
-                add_core(dev, try_add=True)
+                add_core(dev, True)
             elif type(dev) is cas_config.cache_config:
                 start_cache(dev, load=True)
 
